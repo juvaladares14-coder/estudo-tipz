@@ -368,10 +368,10 @@ window.C3 = (function () {
         const at = (id, make) => { const h = document.getElementById(id); if (!h) return; const sl = h.closest('.slide'); const i = [...document.querySelectorAll('.slide')].indexOf(sl); (scenes[i] = scenes[i] || []).push(make(h)); };
         const names = ['o que ela diz', 'o que ela prova', 'o que o mercado percebe'];
         at('globe1', h => orbs(h, { dist: 14, centers: [0], radius: 3.15, dot: .2, N: 1500, core: .16, showStep: 0 }));
-        at('orbs5', h => orbs(h, { fov: 8, dist: 53, gap: 23.34, radius: 3.4, dot: 2.2, color: INK, showStep: 0, parallax: .2 }));
+        at('orbs5', h => orbs(h, { fov: 8, dist: 53, gap: 15.56, radius: 2.9, dot: 1.9, color: INK, showStep: 0, parallax: .2 }));
         at('orbs10', h => orbs(h, { fov: 16, dist: 26.5, gap: 5.2, radius: 2.0, dot: .83, labelGap: .75, names, showStep: 1, mergeStep: 2 }));
         at('map3d', h => map3d(h, Object.assign({ steps: { axes: 0, comp: 0, dec: 1, ev: 2, tall: 3 } }, cfg)));
-        at('wall3d', h => wall3d(h, { showStep: 4, sortStep: 5 }));
+        at('wall3d', h => wall3d(h, { showStep: 1, sortStep: 2 }));
         addEventListener('pointermove', e => { mouse.x = e.clientX / innerWidth * 2 - 1; mouse.y = e.clientY / innerHeight * 2 - 1; });
         requestAnimationFrame(t => { last = t; loop(t); });
         return true;
