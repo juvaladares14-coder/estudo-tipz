@@ -97,19 +97,26 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 
 /* ============ 01 Capa ============ */
 #s1 .kk{position:absolute;left:120px;top:170px;font:700 24px/1 var(--f-m);letter-spacing:.32em;color:var(--mag)}
-#s1 h1{position:absolute;left:120px;top:236px;margin:0;font:800 104px/1 var(--f-t);letter-spacing:-.04em}
-#s1 .ag{position:absolute;left:120px;top:372px;display:flex;align-items:center;gap:34px}
+#s1 h1{position:absolute;left:120px;top:226px;margin:0;font:800 104px/1 var(--f-t);letter-spacing:-.04em}
+#s1 .ag{position:absolute;left:120px;top:360px;display:flex;align-items:center;gap:34px}
 #s1 .ag img{height:118px;display:block;margin-top:10px}
-#s1 .foot{position:absolute;left:120px;right:120px;bottom:118px;display:grid;grid-template-columns:1.1fr 1.5fr .5fr;gap:48px}
+#s1 .meta{position:absolute;left:120px;top:560px;width:960px}
+#s1 .meta b{display:block;font:700 15px/1 var(--f-m);letter-spacing:.22em;text-transform:uppercase;color:var(--mag);margin-bottom:14px}
+#s1 .meta .row{display:grid;grid-template-columns:1.3fr 1fr 90px;gap:32px;border-top:2px solid var(--line-d);padding-top:24px}
+#s1 .meta .row p{font:500 25px/1.3 var(--f-t)}
+#s1 .meta .int{border-top:2px solid var(--line-d);padding-top:24px;margin-top:28px}
+#s1 .meta .nms{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:repeat(4,auto);grid-auto-flow:column;column-gap:40px;row-gap:8px;font:500 25px/1.3 var(--f-t)}
+#s1 .meta .nms li{display:flex;gap:14px;align-items:baseline}
+#s1 .meta .nms li::before{content:'';width:7px;height:7px;border-radius:50%;background:var(--mag);flex:0 0 auto;transform:translateY(-4px)}
 #s1 .foot div{border-top:2px solid var(--line-d);padding-top:22px}
 #s1 .foot b{display:block;font:700 15px/1 var(--f-m);letter-spacing:.18em;text-transform:uppercase;color:var(--mag);margin-bottom:14px}
 #s1 .foot p{font:500 28px/1.35 var(--f-t)}
 #s1 .foot .dash{display:inline-block;width:34px;height:3px;background:currentColor;vertical-align:.32em;margin:0 12px;opacity:.7}
-#globe1{left:1200px;top:150px;width:640px;height:640px}
-#s1 .fbg{position:absolute;left:1240px;top:190px;width:560px;height:560px;border-radius:50%;border:2px dotted var(--line-d)}
+#globe1{left:1170px;top:200px;width:640px;height:640px}
+#s1 .fbg{position:absolute;left:1210px;top:240px;width:560px;height:560px;border-radius:50%;border:2px dotted var(--line-d)}
 #s1 .fbg::after{content:'';position:absolute;left:50%;top:50%;width:70px;height:70px;margin:-35px;border-radius:50%;background:var(--mag)}
-#s1.active .kk,#s1.active h1,#s1.active .ag,#s1.active .foot{animation:up .9s var(--ease) both}
-#s1.active .kk{animation-delay:.15s} #s1.active h1{animation-delay:.25s} #s1.active .ag{animation-delay:.4s} #s1.active .foot{animation-delay:.6s}
+#s1.active .kk,#s1.active h1,#s1.active .ag,#s1.active .meta{animation:up .9s var(--ease) both}
+#s1.active .kk{animation-delay:.15s} #s1.active h1{animation-delay:.25s} #s1.active .ag{animation-delay:.4s} #s1.active .meta{animation-delay:.6s}
 @keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
 
 /* ============ 02 A TIPZ ============ */
@@ -387,7 +394,8 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 #s10.st2 .orbs2 .pingo{transform:scale(1)}
 #s10 .endc h2{font:800 66px/1.06 var(--f-t);letter-spacing:-.035em;text-align:center;width:1500px;margin:18px 0 0}
 #s10 .endc h2 em{font-style:normal;color:var(--mag)}
-#s10 .bye{margin-top:28px;text-align:center;font:600 20px/1.5 var(--f-m);letter-spacing:.12em;text-transform:uppercase;color:var(--mute-d)}
+#s10 .bye .nms2{display:block;max-width:1240px;margin:0 auto;font-size:16px;line-height:1.6}
+#s10 .bye{margin-top:22px;text-align:center;font:600 20px/1.5 var(--f-m);letter-spacing:.12em;text-transform:uppercase;color:var(--mute-d)}
 #s10 .bye b{display:block;font:800 40px/1.2 var(--f-t);letter-spacing:-.02em;text-transform:none;color:var(--paper);margin-bottom:6px}
 
 /* ============ 11 Referencias ============ */
@@ -486,6 +494,20 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 #s14 .src{z-index:9;color:#d8d4cb;opacity:0;transition:opacity .4s}
 #s14[data-step="1"] .src,#s14[data-step="3"] .src,#s14[data-step="5"] .src{opacity:.62;transition:opacity .8s 1.6s}
 @media (prefers-reduced-motion: reduce){#s14 *,#s14 *::before{transition-duration:.01s!important;transition-delay:0s!important}}
+/* ============ Contracapa: o pingo vira o "i" da TIPZ ============ */
+#s10 .cc{position:absolute;inset:0;pointer-events:none;z-index:3}
+#s10 .ccdot{position:absolute;left:0;top:0;width:66px;height:66px;margin:-33px 0 0 -33px;border-radius:50%;background:#E20076;opacity:0;transform:translate(var(--sx,960px),var(--sy,266px));transition:transform .85s cubic-bezier(.76,0,.24,1),opacity .2s linear .75s}
+#s10.st3 .ccdot{opacity:1;transform:translate(660px,420px) scale(1.197);transition:opacity .12s linear,transform 1.15s cubic-bezier(.76,0,.24,1) .12s}
+#s10 .cclogo{position:absolute;left:369px;top:377px;width:1183px;clip-path:circle(0px at 291px 43px);transition:clip-path .6s cubic-bezier(.7,0,.84,0)}
+#s10.st3 .cclogo{clip-path:circle(1300px at 291px 43px);transition:clip-path 1.5s cubic-bezier(.76,0,.24,1) 1.15s}
+#s10 #orbs10,#s10 .orbs2{transition:opacity .5s .45s}
+#s10.st3 #orbs10,#s10.st3 .orbs2{opacity:0;transition:opacity .25s}
+#s10 .ccby{position:absolute;left:0;right:0;top:660px;text-align:center}
+#s10 .ccby.on{transition-delay:2s}
+#s10 .ccby b{display:block;font:800 44px/1.1 var(--f-t);letter-spacing:-.02em;margin-bottom:14px}
+#s10 .ccby span{display:block;max-width:1240px;margin:0 auto;font:600 17px/1.6 var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:var(--mute-d)}
+#s10 .ccby em{display:block;margin-top:22px;font:700 14px/1 var(--f-m);font-style:normal;letter-spacing:.22em;text-transform:uppercase;color:var(--mag)}
+
 /* ============ QR no fim ============ */
 .qrb{display:flex;align-items:center;gap:20px}
 .qrb img{width:150px;height:150px;background:#fff;border-radius:12px;padding:8px;display:block}
@@ -554,10 +576,9 @@ body.presenter #pv{display:grid}
   <p class="kk">BRANDING</p>
   <h1>Estudo de caso:</h1>
   <div class="ag"><img src="assets/img/tipz-logo-claro.png" alt="TIPZ"></div>
-  <div class="foot">
-    <div><b>Curso</b><p>Publicidade e Propaganda<span class="dash"></span>Multivix</p></div>
-    <div><b>Integrantes</b><p>Emmanuel Machado · Júlia Valadares · Izaias Johan</p></div>
-    <div><b>Ano</b><p>2026</p></div>
+  <div class="meta">
+    <div class="row"><div><b>Curso</b><p>Publicidade e Propaganda · Multivix</p></div><div><b>Professor</b><p>Bruno Arrigoni Pazini</p></div><div><b>Ano</b><p>2026</p></div></div>
+    <div class="int"><b>Integrantes</b><ul class="nms"><li>Ana Júlia Alves Moreira</li><li>Emmanuel Machado de Magalhães</li><li>Izaias Johan</li><li>Julia Valadares Cezario</li><li>Letícia de Lima Paes Leme</li><li>Mike Eduardo Noronha Bispo</li><li>Vagner Marques de Araujo Filho</li></ul></div>
   </div>
   <aside class="notes" data-k="0">Apresentar o grupo e o tema: um estudo de caso de branding sobre a TIPZ, agência de Vitória. Ir direto para o próximo slide.</aside>
 </section>
@@ -728,7 +749,7 @@ body.presenter #pv{display:grid}
     </div>
     <div class="cap"><span class="m x"><span style="--i:0">Conheça a Triz</span></span><span class="m x"><span style="--i:1">39 anos · CEO e diretora executiva fictícia</span></span></div>
     <div class="g g2"><span class="m lab"><span style="--i:0">01 · Personalidade</span></span><div class="rl" style="width:560px"></div><span class="m wd"><span style="--i:1">Criativa.</span></span><span class="m wd"><span style="--i:2">Estratégica.</span></span><span class="m wd"><span style="--i:3">Independente.</span></span><span class="m wd mg"><span style="--i:4">Inquieta.</span></span></div>
-    <div class="g g3"><span class="m lab"><span style="--i:0">02 · Visual</span></span><div class="rl" style="width:640px"></div><span class="m wd"><span style="--i:1">Elegante.</span></span><span class="m wd o"><span style="--i:2">Contemporânea.</span></span><span class="m wd"><span style="--i:3">Corporativa.</span></span><span class="m wd mg"><span style="--i:4">Autoral.</span></span></div>
+    <div class="g g3"><span class="m lab"><span style="--i:0">02 · Visual</span></span><div class="rl" style="width:640px"></div><span class="m wd"><span style="--i:1">Elegante.</span></span><span class="m wd"><span style="--i:2">Contemporânea.</span></span><span class="m wd"><span style="--i:3">Corporativa.</span></span><span class="m wd mg"><span style="--i:4">Autoral.</span></span></div>
     <div class="g g4">
       <div class="c tl"><span class="m lab"><span style="--i:0">03 · Comunicação</span></span><span class="m wd"><span style="--i:1">Inteligente.</span></span><div class="rl"></div></div>
       <div class="c tr"><span class="m lab"><span style="--i:0">&nbsp;</span></span><span class="m wd"><span style="--i:2">Direta.</span></span><div class="rl"></div></div>
@@ -739,7 +760,7 @@ body.presenter #pv{display:grid}
   </div>
   <div class="sig">Beatriz · <b>Triz</b></div>
   <i data-s="1" style="display:none"></i><i data-s="2" style="display:none"></i><i data-s="3" style="display:none"></i><i data-s="4" style="display:none"></i><i data-s="5" style="display:none"></i>
-  <p class="src">Persona e imagem criadas pelo grupo a partir da pesquisa sobre a marca.</p>
+  <p class="src">Persona criada pelo grupo com apoio de IA generativa, a partir da pesquisa sobre a marca.</p>
   <aside class="notes" data-k="0">(Tela preta, a pergunta entra.) <b>E se a TIPZ fosse uma pessoa?</b> Para traduzir a marca de um jeito mais próximo, criamos uma persona.</aside>
   <aside class="notes" data-k="1">(O pingo magenta da TIPZ abre a cena.) Esta é a <b>Beatriz, a Triz</b>: 39 anos, CEO e diretora executiva fictícia. Madura, com repertório e prêmios, mas sem perder a personalidade autoral. Fugimos de uma figura jovem demais, que não combinaria com a credibilidade da marca.</aside>
   <aside class="notes" data-k="2"><b>Personalidade:</b> criativa, estratégica, independente e inquieta. É o "Independentes. Inquietos. Presentes." do site em forma de gente.</aside>
@@ -823,7 +844,7 @@ body.presenter #pv{display:grid}
 </section>
 
 <!-- ================= 11 CONCLUSAO ================= -->
-<section class="slide dark" id="s10" data-title="Conclusão" data-time="30">
+<section class="slide dark" id="s10" data-title="Conclusão" data-time="35">
   <h2 class="ttl"><span class="no">11</span><span class="rule"></span>Conclusão</h2>
   <p class="sub">O que o estudo da TIPZ mostra sobre branding.</p>
   <div class="stm">
@@ -834,13 +855,17 @@ body.presenter #pv{display:grid}
   <div class="endc" data-s="1">
     <div class="h3d" id="orbs10"></div>
     <div class="orbs2 fallback2d"><div class="orb o1">o que ela diz</div><div class="orb o2">o que ela prova</div><div class="orb o3">o que o mercado percebe</div><div class="pingo"></div></div>
-    <h2>Uma marca é escolhida quando as três coisas <em>apontam para o mesmo lugar.</em></h2>
-    <div class="bye" data-s="2"><b>Obrigado.</b>Emmanuel Machado · Júlia Valadares · Izaias Johan</div>
-    <div class="qrb" data-s="2"><img src="assets/img/qr-site.svg" alt="QR code para a apresentação completa"><p>Veja a apresentação completa<span>juvaladares14-coder.github.io/estudo-tipz</span></p></div>
+    <h2 data-out="3">Uma marca é escolhida quando as três coisas <em>apontam para o mesmo lugar.</em></h2>
+  </div>
+  <div class="cc">
+    <i class="ccdot"></i>
+    <img class="cclogo" src="assets/img/tipz-logo-claro.png" alt="TIPZ, Boutique Creative Agency">
+    <div class="ccby" data-s="3"><b>Obrigado.</b><span>Ana Júlia Alves Moreira · Emmanuel Machado de Magalhães · Izaias Johan · Julia Valadares Cezario · Letícia de Lima Paes Leme · Mike Eduardo Noronha Bispo · Vagner Marques de Araujo Filho</span><em>Branding · Publicidade e Propaganda · Multivix · 2026</em></div>
   </div>
   <aside class="notes" data-k="0">Conclusão estratégica em três frases. Identidade: forte e bem aplicada. Reputação: comprovada por júris independentes. Posicionamento: pede síntese, e as oportunidades mostram como.</aside>
   <aside class="notes" data-k="1">Voltar à pergunta do slide 4: o que ela diz, o que ela prova e o que o mercado percebe.</aside>
-  <aside class="notes" data-k="2">(As esferas se juntam no pingo magenta.) Uma marca é escolhida quando as três coisas apontam para o mesmo lugar. Agradecer e abrir para perguntas.</aside>
+  <aside class="notes" data-k="2">(As esferas se juntam no pingo magenta.) Uma marca é escolhida quando as três coisas apontam para o mesmo lugar.</aside>
+  <aside class="notes" data-k="3">(O pingo vira o "i" e a marca aparece.) No fim, tudo isso forma a TIPZ. Obrigado. Abrir para perguntas.</aside>
 </section>
 
 <!-- ================= 11 REFERENCIAS ================= -->
@@ -853,6 +878,7 @@ body.presenter #pv{display:grid}
     <div class="g"><h4>Cases</h4><p>Post do E. C. Bahia no Instagram (25/11/2025)</p><p>ESPN: Bahia x Vasco, 23/11/2025</p><p>YouTube de Lara Santana, Rota Amarela</p></div>
     <div class="g"><h4>Mercado</h4><p>Grandes Nomes da Propaganda (30/09/2026); 24h Notícias (25/09/2026)</p><p>Sites da MP, Prósper, Ampla; ES Hoje (Conteúdo, 2026); Stone World (Marmomac 2025)</p></div>
     <div class="g"><h4>Livros da disciplina</h4><p>Bedendo (2024). Branding: como fazer na prática, cap. 5</p><p>Rocha e Oliveira (2017), cap. 2</p><p>Melo et al. (SAGAH, 2018), cap. Branding</p><p>Perez; Consolo</p><p><span>Pesquisa feita entre 03 e 05/11/2026.</span></p></div>
+    <div class="g"><h4>Uso de inteligência artificial</h4><p>Claude (Anthropic): apoio à pesquisa, à organização do conteúdo e à construção da apresentação interativa e da versão web</p><p>IA generativa: produção da imagem e do texto-base da persona Beatriz, com direção criativa do grupo</p><p><span>Dados e fontes conferidos nas referências acima.</span></p></div>
   </div>
   <div class="qrb"><img src="assets/img/qr-site.svg" alt="QR code para a apresentação completa"><p>Veja a apresentação completa<span>juvaladares14-coder.github.io/estudo-tipz</span></p></div>
   <p class="disc">Trabalho acadêmico, sem vínculo com a agência.</p>
@@ -1006,6 +1032,14 @@ function setupCases(){
   }));
 }
 
+/* ---------- Contracapa: posicao inicial do pingo (onde as esferas se juntam) ---------- */
+function pingoStart(s){
+  const el=HAS3D?document.getElementById('orbs10'):s.querySelector('.orbs2 .pingo'); if(!el) return;
+  const st=stage.getBoundingClientRect(), r=el.getBoundingClientRect();
+  s.style.setProperty('--sx',((r.left+r.width/2-st.left)/currentScale)+'px');
+  s.style.setProperty('--sy',((r.top+r.height/2-st.top)/currentScale)+'px');
+}
+
 let HAS3D=false;
 function init(){
   const L3={agencia:CAMADAS.agencia?4:null}; L3.turma=CAMADAS.turma?(CAMADAS.agencia?5:4):null;
@@ -1040,6 +1074,7 @@ function render(){
     if(on){
       s.dataset.step=step;
       if(s.id==='s6') caseState(s);
+      if(s.id==='s10') pingoStart(s);
       for(let k=1;k<=10;k++) s.classList.toggle('st'+k, step>=k);
       s.querySelectorAll('[data-s]').forEach(e=>e.classList.toggle('on', step>=+e.dataset.s));
       s.querySelectorAll('[data-out]').forEach(e=>e.classList.toggle('off', step>=+e.dataset.out));
