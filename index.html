@@ -401,25 +401,91 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 #s11 .bye p{font:500 17px/1.4 var(--f-m);letter-spacing:.06em;margin-top:14px;color:var(--mute-l)}
 #s11 .disc{position:absolute;left:120px;bottom:40px;font:500 16px/1.4 var(--f-m);letter-spacing:.06em;color:var(--mute-l)}
 
-/* ============ Persona (Beatriz, a TIPZ como pessoa) ============ */
-#s14 .bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-#s14 .shd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.55),rgba(8,8,8,0) 38%,rgba(8,8,8,0) 62%,rgba(8,8,8,.5))}
-#s14 .ttl{color:var(--paper)}
-#s14 .nmb{position:absolute;left:120px;top:236px;width:560px}
-#s14 .nmb b{display:block;font:800 124px/.95 var(--f-t);letter-spacing:-.05em;color:var(--mag)}
-#s14 .nmb span{display:block;font:700 30px/1.25 var(--f-t);margin-top:14px}
-#s14 .nmb em{display:block;font:600 16px/1.4 var(--f-m);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:#d8d4cb;margin-top:12px}
-#s14 .tp{position:absolute;width:480px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
-#s14 .tp i{display:block;width:96px;height:3px;background:var(--mag);margin-bottom:16px}
-#s14 .tp h4{font:700 18px/1 var(--f-m);letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 10px}
-#s14 .tp p{font:700 32px/1.2 var(--f-t);letter-spacing:-.015em;color:#fff;margin:0 0 14px}
-#s14 .tp .tg{display:flex;flex-wrap:wrap;gap:8px}
-#s14 .tp .tg span{font:600 18px/1 var(--f-b);padding:9px 14px;border-radius:99px;background:rgba(8,8,8,.55);border:1px solid rgba(240,237,230,.3);color:#fff;text-shadow:none}
-#s14 .t1{left:120px;top:600px}
-#s14 .t2{left:1330px;top:220px}
-#s14 .t3{left:1330px;top:640px}
-#s14 .src{color:#d8d4cb}
-
+/* ============ Persona (Beatriz, a TIPZ como pessoa): motion editorial ============ */
+#s14{--eo:cubic-bezier(.16,1,.3,1);--ein:cubic-bezier(.7,0,.84,0);--eio:cubic-bezier(.76,0,.24,1);background:#080808}
+#s14 .kick{z-index:9;color:var(--paper)}
+#s14 .m{display:block;overflow:hidden;padding-bottom:.14em;margin-bottom:-.07em}
+#s14 .m>span{display:block;transform:translateY(135%);transition:transform .5s var(--ein)}
+/* 0. abertura */
+#s14 .q{position:absolute;left:0;right:0;top:300px;text-align:center;z-index:2}
+#s14 .q .ey{display:inline-block;font:700 18px/1 var(--f-m);letter-spacing:.34em;color:var(--mag);margin-bottom:34px}
+#s14 .q .ln{display:block;font:800 132px/1.03 var(--f-t);letter-spacing:-.045em;color:var(--paper)}
+#s14 .q .w{display:inline-block;overflow:hidden;vertical-align:top;padding:0 .035em .14em;margin-bottom:-.07em}
+#s14 .q .w>span{display:inline-block;transform:translateY(135%) rotate(7deg);transform-origin:0 100%;transition:transform .45s var(--ein)}
+#s14 .q .tz{color:var(--mag)}
+#s14 .q .ey>span{display:inline-block;transform:translateY(130%);transition:transform .45s var(--ein)}
+#s14[data-step="0"] .q .w>span,#s14[data-step="0"] .q .ey>span{transform:none;transition:transform 1.05s var(--eo) calc(.25s + var(--i,0) * .085s)}
+#s14 .pd{position:absolute;left:943px;top:768px;width:34px;height:34px;border-radius:50%;background:var(--mag);z-index:3;transform:scale(0);transition:transform .45s var(--ein)}
+#s14[data-step="0"] .pd{transform:scale(1);transition:transform .75s cubic-bezier(.3,1.7,.5,1) 1.25s}
+#s14[data-step="1"] .pd,#s14[data-step="2"] .pd,#s14[data-step="3"] .pd,#s14[data-step="4"] .pd,#s14[data-step="5"] .pd{transform:scale(78);transition:transform .95s var(--eio)}
+/* cena em camadas: fundo, tipografia, personagem */
+#s14 .scene{position:absolute;inset:0;z-index:4;overflow:hidden;clip-path:circle(0% at 960px 785px);transition:clip-path .75s var(--ein)}
+#s14[data-step="1"] .scene,#s14[data-step="2"] .scene,#s14[data-step="3"] .scene,#s14[data-step="4"] .scene,#s14[data-step="5"] .scene{clip-path:circle(2300px at 960px 785px);transition:clip-path 1.35s var(--eio) .5s}
+#s14 .cam{position:absolute;inset:0;transform:scale(1.14);transform-origin:50% 62%;transition:transform 1.2s var(--eio)}
+#s14[data-step="1"] .cam,#s14[data-step="2"] .cam,#s14[data-step="3"] .cam,#s14[data-step="4"] .cam,#s14[data-step="5"] .cam{transform:scale(1);transition:transform 2.8s var(--eo) .45s}
+#s14 .bgx{position:absolute;inset:-90px;background:radial-gradient(ellipse 58% 72% at 56% 52%,#4f4c48 0%,#3b3936 42%,#221f1c 100%);transition:transform 1.5s var(--eio)}
+#s14[data-step="2"] .bgx{transform:translateX(60px)}
+#s14[data-step="3"] .bgx{transform:translateX(-60px)}
+#s14[data-step="5"] .bgx{transform:translateX(-40px) scale(1.04)}
+/* nome que sai de tras da silhueta */
+#s14 .nm{position:absolute;top:304px;font:900 250px/.9 var(--f-t);letter-spacing:-.06em;white-space:nowrap;opacity:0;transition:transform .7s var(--ein),opacity .45s var(--ein)}
+#s14 .nm.a{right:1150px;color:var(--paper);transform:translateX(330px)}
+#s14 .nm.b{left:1222px;color:var(--mag);transform:translateX(-330px)}
+#s14[data-step="1"] .nm{transform:none;opacity:1;transition:transform 1.6s var(--eo) 1.15s,opacity .7s linear 1.15s}
+#s14[data-step="2"] .nm.a,#s14[data-step="3"] .nm.a,#s14[data-step="4"] .nm.a,#s14[data-step="5"] .nm.a{transform:translateX(-260px)}
+#s14[data-step="2"] .nm.b,#s14[data-step="3"] .nm.b,#s14[data-step="4"] .nm.b,#s14[data-step="5"] .nm.b{transform:translateX(260px)}
+#s14 .cap{position:absolute;left:120px;top:640px;width:640px;z-index:3}
+#s14 .cap .m>span{font:600 21px/1.4 var(--f-m);letter-spacing:.06em;color:var(--paper)}
+#s14 .cap .m:first-child>span{font:700 15px/1.4 var(--f-m);letter-spacing:.24em;text-transform:uppercase;color:var(--mag)}
+#s14[data-step="1"] .cap .m>span{transform:none;transition:transform .9s var(--eo) calc(1.9s + var(--i,0) * .1s)}
+#s14 .sig{position:absolute;right:120px;top:58px;z-index:9;font:700 18px/1 var(--f-m);letter-spacing:.2em;text-transform:uppercase;color:var(--paper);opacity:0;transform:translateY(-10px);transition:opacity .4s,transform .5s var(--ein)}
+#s14 .sig b{color:var(--mag)}
+#s14[data-step="2"] .sig,#s14[data-step="3"] .sig,#s14[data-step="4"] .sig,#s14[data-step="5"] .sig{opacity:1;transform:none;transition:opacity .6s .6s,transform .9s var(--eo) .6s}
+/* personagem (so desloca e muda de escala inteira; o rosto nunca deforma) */
+#s14 .ch{position:absolute;left:618px;bottom:0;width:1037px;height:1000px;transform-origin:33% 100%;transition:transform 1.35s var(--eio)}
+#s14 .ch img{width:100%;height:100%;display:block;-webkit-mask-image:linear-gradient(to right,#000 80%,transparent 99%);mask-image:linear-gradient(to right,#000 80%,transparent 99%)}
+#s14[data-step="2"] .ch{transform:translateX(-480px)}
+#s14[data-step="3"] .ch{transform:translateX(420px)}
+#s14[data-step="4"] .ch{transform:scale(.9)}
+#s14[data-step="5"] .ch{transform:translateX(450px)}
+/* grupos de palavras */
+#s14 .g{position:absolute;z-index:5}
+#s14 .g .lab{margin-bottom:16px}
+#s14 .g .lab>span{font:700 17px/1.2 var(--f-m);letter-spacing:.26em;text-transform:uppercase;color:var(--mag)}
+#s14 .g .rl{height:2px;background:rgba(240,237,230,.7);transform:scaleX(0);transform-origin:0 50%;transition:transform .4s var(--ein);margin:0 0 22px}
+#s14 .g .wd>span{font:800 86px/.98 var(--f-t);letter-spacing:-.045em;color:var(--paper)}
+#s14 .g .wd.o>span{color:transparent;-webkit-text-stroke:2px var(--paper)}
+#s14 .g .wd.mg>span{color:var(--mag)}
+#s14 .g2{left:1180px;top:250px;width:640px}
+#s14 .g3{left:120px;top:250px;width:860px}
+#s14 .g5{left:120px;top:286px;width:900px}
+#s14 .g5 .wd>span{font-size:104px}
+#s14 .g5 .sg{margin-top:30px}
+#s14 .g5 .sg>span{font:700 18px/1.4 var(--f-m);letter-spacing:.16em;text-transform:uppercase;color:var(--paper)}
+#s14 .g5 .sg>span b{color:var(--mag)}
+#s14 .g5 .nx{margin-top:150px}
+#s14 .g5 .nx>span{font:600 17px/1.4 var(--f-m);letter-spacing:.14em;text-transform:uppercase;color:var(--mute-d)}
+#s14 .g4 .c{position:absolute;width:640px}
+#s14 .g4 .c.tl{left:120px;top:250px} #s14 .g4 .c.tr{right:120px;top:250px;text-align:right}
+#s14 .g4 .c.bl{left:120px;top:690px} #s14 .g4 .c.br{right:120px;top:690px;text-align:right}
+#s14 .g4 .c .wd>span{font-size:96px}
+#s14 .g4 .c.tr .rl,#s14 .g4 .c.br .rl{transform-origin:100% 50%;margin-left:auto}
+#s14 .g4 .rl{width:300px}
+#s14 .g4{inset:0}
+#s14 .fr{position:absolute;left:1108px;top:150px;width:580px;height:830px;border:2px solid var(--mag);clip-path:inset(0 0 100% 0);transition:clip-path .6s var(--ein)}
+#s14[data-step="3"] .fr{clip-path:inset(0 0 0 0);transition:clip-path 1.3s var(--eio) .35s}
+#s14[data-step="4"] .fr,#s14[data-step="5"] .fr{clip-path:inset(100% 0 0 0)}
+/* entrada de cada grupo no seu passo; saida para cima nos passos seguintes */
+#s14[data-step="2"] .g2 .m>span,#s14[data-step="3"] .g3 .m>span,#s14[data-step="4"] .g4 .m>span,#s14[data-step="5"] .g5 .m>span{transform:none;transition:transform 1.05s var(--eo) calc(.55s + var(--i,0) * .085s)}
+#s14[data-step="2"] .g2 .rl,#s14[data-step="3"] .g3 .rl,#s14[data-step="4"] .g4 .rl,#s14[data-step="5"] .g5 .rl{transform:scaleX(1);transition:transform 1.1s var(--eio) .45s}
+#s14[data-step="3"] .g2 .m>span,#s14[data-step="4"] .g2 .m>span,#s14[data-step="5"] .g2 .m>span,
+#s14[data-step="4"] .g3 .m>span,#s14[data-step="5"] .g3 .m>span,
+#s14[data-step="5"] .g4 .m>span{transform:translateY(-135%)}
+#s14[data-step="1"] .q .w>span,#s14[data-step="2"] .q .w>span,#s14[data-step="3"] .q .w>span,#s14[data-step="4"] .q .w>span,#s14[data-step="5"] .q .w>span,
+#s14[data-step="1"] .q .ey>span,#s14[data-step="2"] .q .ey>span,#s14[data-step="3"] .q .ey>span,#s14[data-step="4"] .q .ey>span,#s14[data-step="5"] .q .ey>span{transform:translateY(-135%) rotate(-4deg)}
+#s14 .src{z-index:9;color:#d8d4cb;opacity:0;transition:opacity .4s}
+#s14[data-step="1"] .src,#s14[data-step="3"] .src,#s14[data-step="5"] .src{opacity:.62;transition:opacity .8s 1.6s}
+@media (prefers-reduced-motion: reduce){#s14 *,#s14 *::before{transition-duration:.01s!important;transition-delay:0s!important}}
 /* ============ QR no fim ============ */
 .qrb{display:flex;align-items:center;gap:20px}
 .qrb img{width:150px;height:150px;background:#fff;border-radius:12px;padding:8px;display:block}
@@ -644,18 +710,40 @@ body.presenter #pv{display:grid}
 
 <!-- ================= 07 PERSONA ================= -->
 <section class="slide dark" id="s14" data-title="Persona" data-time="50">
-  <img class="bgp" src="assets/img/persona-triz.jpg" alt="Retrato da persona Beatriz: mulher de 39 anos, cabelo rosa claro, blazer preto e gravata">
-  <div class="shd"></div>
-  <h2 class="ttl"><span class="no">07</span><span class="rule"></span>Persona</h2>
-  <div class="nmb"><b>Beatriz</b><span>"Triz", CEO e diretora executiva</span><em>A TIPZ como pessoa · personagem fictícia</em></div>
-  <div class="tp t1" data-s="1"><i></i><h4>Personalidade</h4><p>Criativa, estratégica e independente.</p><div class="tg"><span>inquieta</span><span>segura de si</span><span>autoral</span><span>presente</span></div></div>
-  <div class="tp t2" data-s="2"><i></i><h4>Visual</h4><p>Elegante, contemporânea e criativa.</p><div class="tg"><span>39 anos</span><span>cabelo rosa claro</span><span>blazer preto</span><span>toque magenta</span></div></div>
-  <div class="tp t3" data-s="3"><i></i><h4>Comunicação</h4><p>Inteligente, direta e persuasiva.</p><div class="tg"><span>clara</span><span>estratégica</span><span>mostra resultados, prêmios e método</span></div></div>
+  <div class="kick"><span class="n">07</span><span class="bar"></span>Persona</div>
+  <div class="q" aria-label="E se a TIPZ fosse uma pessoa?">
+    <span class="ey"><span style="--i:0">A TIPZ COMO PESSOA</span></span>
+    <span class="ln"><span class="w"><span style="--i:1">E</span></span> <span class="w"><span style="--i:2">se</span></span> <span class="w"><span style="--i:3">a</span></span> <span class="w"><span class="tz" style="--i:4">TIPZ</span></span></span>
+    <span class="ln"><span class="w"><span style="--i:5">fosse</span></span> <span class="w"><span style="--i:6">uma</span></span> <span class="w"><span style="--i:7">pessoa?</span></span></span>
+  </div>
+  <i class="pd"></i>
+  <div class="scene">
+    <div class="cam">
+      <div class="bgx"></div>
+      <div class="fr"></div>
+      <div class="nm a">BEA</div><div class="nm b">TRIZ</div>
+      <div class="ch"><img src="assets/img/triz-recorte.webp" alt="Beatriz, a persona: mulher de 39 anos, cabelo rosa claro, óculos, blazer preto e gravata"></div>
+    </div>
+    <div class="cap"><span class="m x"><span style="--i:0">Conheça a Triz</span></span><span class="m x"><span style="--i:1">39 anos · CEO e diretora executiva fictícia</span></span></div>
+    <div class="g g2"><span class="m lab"><span style="--i:0">01 · Personalidade</span></span><div class="rl" style="width:560px"></div><span class="m wd"><span style="--i:1">Criativa.</span></span><span class="m wd"><span style="--i:2">Estratégica.</span></span><span class="m wd"><span style="--i:3">Independente.</span></span><span class="m wd mg"><span style="--i:4">Inquieta.</span></span></div>
+    <div class="g g3"><span class="m lab"><span style="--i:0">02 · Visual</span></span><div class="rl" style="width:640px"></div><span class="m wd"><span style="--i:1">Elegante.</span></span><span class="m wd o"><span style="--i:2">Contemporânea.</span></span><span class="m wd"><span style="--i:3">Corporativa.</span></span><span class="m wd mg"><span style="--i:4">Autoral.</span></span></div>
+    <div class="g g4">
+      <div class="c tl"><span class="m lab"><span style="--i:0">03 · Comunicação</span></span><span class="m wd"><span style="--i:1">Inteligente.</span></span><div class="rl"></div></div>
+      <div class="c tr"><span class="m lab"><span style="--i:0">&nbsp;</span></span><span class="m wd"><span style="--i:2">Direta.</span></span><div class="rl"></div></div>
+      <div class="c bl"><span class="m wd"><span style="--i:3">Persuasiva.</span></span><div class="rl"></div></div>
+      <div class="c br"><span class="m wd mg"><span style="--i:4">Segura.</span></span><div class="rl"></div></div>
+    </div>
+    <div class="g g5"><span class="m wd"><span style="--i:0">Ela pensa como</span></span><span class="m wd"><span style="--i:1">estrategista.</span></span><span class="m wd mg"><span style="--i:2">Cria como</span></span><span class="m wd mg"><span style="--i:3">artista.</span></span><div class="m sg"><span style="--i:4">Beatriz, a <b>Triz</b> · a TIPZ como pessoa</span></div><div class="m nx"><span style="--i:5">a seguir: a identidade visual →</span></div></div>
+  </div>
+  <div class="sig">Beatriz · <b>Triz</b></div>
+  <i data-s="1" style="display:none"></i><i data-s="2" style="display:none"></i><i data-s="3" style="display:none"></i><i data-s="4" style="display:none"></i><i data-s="5" style="display:none"></i>
   <p class="src">Persona e imagem criadas pelo grupo a partir da pesquisa sobre a marca.</p>
-  <aside class="notes" data-k="0">Para traduzir tudo isso de forma mais próxima, criamos uma persona: a TIPZ como pessoa. <b>Beatriz, a Triz</b>, CEO e diretora executiva, 39 anos. Madura, com repertório e prêmios, mas sem perder a personalidade autoral. Fugimos de uma figura jovem demais, que não combinaria com a credibilidade da marca.</aside>
-  <aside class="notes" data-k="1"><b>Personalidade:</b> criativa, estratégica e independente. Inquieta, segura de si, autoral e presente, como o "Independentes. Inquietos. Presentes." do site.</aside>
-  <aside class="notes" data-k="2"><b>Visual:</b> elegante, contemporânea e criativa. O cabelo rosa claro e os detalhes magenta vêm da cor da marca; o blazer preto, da postura corporativa. Corporativa, mas com personalidade.</aside>
-  <aside class="notes" data-k="3"><b>Comunicação:</b> inteligente, direta e persuasiva. Fala de forma criativa sem perder a postura de quem lidera o negócio, e mostra resultados, prêmios e método. É a boutique criativa independente em forma de gente.</aside>
+  <aside class="notes" data-k="0">(Tela preta, a pergunta entra.) <b>E se a TIPZ fosse uma pessoa?</b> Para traduzir a marca de um jeito mais próximo, criamos uma persona.</aside>
+  <aside class="notes" data-k="1">(O pingo magenta da TIPZ abre a cena.) Esta é a <b>Beatriz, a Triz</b>: 39 anos, CEO e diretora executiva fictícia. Madura, com repertório e prêmios, mas sem perder a personalidade autoral. Fugimos de uma figura jovem demais, que não combinaria com a credibilidade da marca.</aside>
+  <aside class="notes" data-k="2"><b>Personalidade:</b> criativa, estratégica, independente e inquieta. É o "Independentes. Inquietos. Presentes." do site em forma de gente.</aside>
+  <aside class="notes" data-k="3"><b>Visual:</b> elegante, contemporânea, corporativa e autoral. O cabelo rosa vem do magenta da marca; o blazer preto, da postura corporativa.</aside>
+  <aside class="notes" data-k="4"><b>Comunicação:</b> inteligente, direta, persuasiva e segura. Fala de forma criativa sem perder a postura de quem lidera o negócio, e mostra resultados, prêmios e método.</aside>
+  <aside class="notes" data-k="5">Em uma frase: <b>ela pensa como estrategista e cria como artista.</b> E a identidade visual, que vem a seguir, é a roupa que a Beatriz veste.</aside>
 </section>
 
 <!-- ================= 08 IDENTIDADE ================= -->
