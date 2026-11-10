@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Branding · Estudo de caso TIPZ</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#080808">
+<style>
+@font-face{font-family:'Inter';font-weight:400 800;font-display:swap;src:url(assets/fonts/Inter-normal.woff2) format('woff2')}
+@font-face{font-family:'Inter Tight';font-weight:500 900;font-display:swap;src:url(assets/fonts/InterTight-normal.woff2) format('woff2')}
+@font-face{font-family:'JetBrains Mono';font-weight:400 700;font-display:swap;src:url(assets/fonts/JetBrainsMono-normal.woff2) format('woff2')}
+@font-face{font-family:'Playfair Display';font-style:italic;font-weight:500 800;font-display:swap;src:url(assets/fonts/PlayfairDisplay-italic.woff2) format('woff2')}
+:root{--ink:#080808;--ink2:#161616;--paper:#F0EDE6;--mag:#E8007D;--mag-ink:#B80064;--hl:#FFD84D;--mid:#8E8A82;--mute-d:#A39E94;--mute-l:#5E5A52;--line-d:rgba(240,237,230,.16);--line-l:rgba(8,8,8,.14);
+  --f-t:'Inter Tight','Inter',system-ui,sans-serif;--f-b:'Inter',system-ui,sans-serif;--f-m:'JetBrains Mono',Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--ink);color:var(--paper);font:400 17px/1.55 var(--f-b);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+p{margin:0}
+.w{width:100%;max-width:720px;margin:0 auto;padding:0 20px}
+
+/* barra */
+.top{position:sticky;top:0;z-index:20;background:rgba(8,8,8,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line-d);padding-top:env(safe-area-inset-top)}
+.top .row{display:flex;align-items:center;justify-content:space-between;gap:12px;height:52px}
+.top .row b{font:700 14px/1.2 var(--f-m);letter-spacing:.1em;text-transform:uppercase;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.top .row b span{color:var(--mag)}
+.top .row a{flex:0 0 auto;font:700 13px/1 var(--f-m);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--paper);border-radius:99px;padding:9px 12px}
+.nav{display:flex;gap:8px;overflow-x:auto;padding:0 20px 10px;scrollbar-width:none;max-width:720px;margin:0 auto}
+.nav::-webkit-scrollbar{display:none}
+.nav a{flex:0 0 auto;font:600 14px/1 var(--f-b);text-decoration:none;padding:8px 12px;border-radius:99px;background:var(--ink2);border:1px solid var(--line-d)}
+
+/* secoes */
+section{padding:52px 0 56px}
+section.l{background:var(--paper);color:var(--ink)}
+.no{display:flex;align-items:center;gap:12px;font:700 15px/1 var(--f-m);letter-spacing:.14em;text-transform:uppercase;color:var(--mag);margin-bottom:10px}
+.no i{width:28px;height:3px;background:currentColor;border-radius:2px}
+h2{font:800 clamp(32px,9vw,46px)/1.02 var(--f-t);letter-spacing:-.035em;margin:0 0 10px}
+.sub{color:var(--mute-d);font-size:17px;margin-bottom:26px}
+.l .sub{color:var(--mute-l)}
+.k{font:700 13px/1.2 var(--f-m);letter-spacing:.16em;text-transform:uppercase;color:var(--mag);margin-bottom:10px}
+.l .k{color:var(--mag-ink)}
+.src{font:400 12.5px/1.5 var(--f-m);opacity:.62;margin-top:28px;overflow-wrap:anywhere}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font:600 15px/1.2 var(--f-t);padding:8px 13px;border-radius:99px;background:var(--ink);color:var(--paper)}
+.tags.m span{background:var(--mag-ink)}
+.tags.o span{background:transparent;border:1.5px solid rgba(240,237,230,.4)}
+
+/* capa */
+.capa{padding:48px 0 40px}
+.capa .k{letter-spacing:.3em}
+.capa h1{font:800 clamp(40px,12vw,64px)/1 var(--f-t);letter-spacing:-.04em;margin:8px 0 18px}
+.capa .logo{width:min(100%,360px);margin-bottom:34px}
+.capa dl{margin:0;display:grid;gap:16px}
+.capa dt{font:700 12px/1 var(--f-m);letter-spacing:.18em;text-transform:uppercase;color:var(--mag);margin-bottom:6px}
+.capa dd{margin:0;font:500 18px/1.4 var(--f-t);border-top:1px solid var(--line-d);padding-top:8px}
+.capa .orb{width:150px;height:150px;border-radius:50%;border:2px dotted rgba(240,237,230,.4);display:flex;align-items:center;justify-content:center;margin:0 0 30px}
+.capa .orb::after{content:'';width:34px;height:34px;border-radius:50%;background:var(--mag)}
+
+/* A TIPZ */
+.media{border-radius:14px;overflow:hidden;background:#000;aspect-ratio:16/9;margin-bottom:24px}
+.media video,.media img{width:100%;height:100%;object-fit:cover}
+.facts{display:grid;gap:18px;margin-bottom:28px}
+.facts div{border-top:2px solid var(--mag);padding-top:12px}
+.facts b{display:block;font:800 32px/1 var(--f-t);letter-spacing:-.03em;margin-bottom:6px}
+.mission{background:var(--ink2);border-radius:16px;padding:22px}
+.mission .ms{font:500 21px/1.42 var(--f-b);margin-bottom:18px}
+.mission .ms em{font-style:normal;color:var(--mag);font-weight:600}
+.mission .lr{border-left:3px solid rgba(240,237,230,.3);padding-left:16px;color:#d8d4cb;font-size:16px}
+.mission .lr b{color:var(--hl);font-weight:600}
+
+/* trajetoria */
+.tl{list-style:none;margin:0;padding:0 0 0 26px;border-left:3px solid var(--mag)}
+.tl li{position:relative;padding:0 0 26px}
+.tl li::before{content:'';position:absolute;left:-37px;top:6px;width:19px;height:19px;border-radius:50%;background:var(--mag);border:4px solid var(--paper);box-shadow:0 0 0 2px var(--mag)}
+.tl b{display:block;font:800 40px/1 var(--f-t);letter-spacing:-.04em;margin-bottom:6px}
+.tl p{font-size:17px}
+
+/* posicionamento */
+.pos{display:grid;gap:14px}
+.pos>div{background:#fff;border-radius:16px;padding:18px 18px 20px;box-shadow:0 10px 24px rgba(8,8,8,.06)}
+.pos h3{font:700 23px/1.15 var(--f-t);margin:0 0 4px;display:flex;align-items:center;gap:10px}
+.pos h3 i{width:26px;height:26px;border-radius:50%;border:2px dotted var(--ink);flex:0 0 auto}
+.pos .th{font:500 12.5px/1 var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:var(--mute-l);margin-bottom:12px}
+.arrow{text-align:center;color:var(--mag-ink);font:700 22px/1 var(--f-t)}
+
+/* cases */
+.case{background:var(--ink2);border-radius:18px;overflow:hidden;margin-bottom:22px}
+.case video{width:100%;aspect-ratio:16/9;background:#000;object-fit:contain}
+.case .bd{padding:18px 18px 20px}
+.case .cli{font:700 12.5px/1.3 var(--f-m);letter-spacing:.1em;text-transform:uppercase;color:var(--mag)}
+.case h3{font:800 28px/1.05 var(--f-t);letter-spacing:-.03em;margin:6px 0 4px}
+.case .pr{color:#d8d4cb;font-size:15px;margin-bottom:14px}
+.case dl{margin:0;display:grid;gap:12px}
+.case dt{font:700 12px/1 var(--f-m);letter-spacing:.14em;text-transform:uppercase;color:var(--mag);margin-bottom:4px}
+.case dd{margin:0;font-size:16px}
+.common{font:600 20px/1.35 var(--f-t);border-left:4px solid var(--mag);padding-left:14px;margin-top:6px}
+
+/* reconhecimento */
+.stats{display:grid;gap:12px;margin-bottom:30px}
+.stats div{border-top:3px solid var(--ink);padding-top:12px}
+.stats div:first-child{border-color:var(--mag)}
+.stats b{display:block;font:800 clamp(52px,16vw,72px)/.95 var(--f-t);letter-spacing:-.05em}
+.stats div:first-child b{color:var(--mag-ink)}
+.stats span{display:block;font:600 19px/1.3 var(--f-t);margin-top:6px}
+.stats em{display:block;font:600 13px/1.4 var(--f-m);font-style:normal;color:var(--mute-l);margin-top:4px}
+.vit{background:#fff;border-radius:16px;padding:18px}
+.vit h3{font:800 22px/1.15 var(--f-t);margin:0 0 6px}
+.vit .g{border-top:1px solid var(--line-l);padding:12px 0}
+.vit .g b{font:800 30px/1 var(--f-t);margin-right:8px}
+.vit .g h4{display:inline;font:700 12.5px/1.3 var(--f-m);letter-spacing:.1em;text-transform:uppercase}
+.vit .g p{font-size:15px;color:var(--mute-l);margin-top:6px}
+.vit .g.c1 b{color:var(--mag-ink)}
+
+/* persona */
+.per{border-radius:18px;overflow:hidden;margin-bottom:22px;position:relative;background:#2b2b2b}
+.per img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.per .nm{position:absolute;left:0;right:0;bottom:0;padding:60px 18px 16px;background:linear-gradient(transparent,rgba(8,8,8,.85))}
+.per .nm b{display:block;font:800 46px/1 var(--f-t);letter-spacing:-.04em;color:var(--mag)}
+.per .nm span{font:700 17px/1.3 var(--f-t)}
+.per .nm em{display:block;font:600 12px/1.4 var(--f-m);font-style:normal;letter-spacing:.1em;text-transform:uppercase;color:#d8d4cb;margin-top:6px}
+.tp{border-top:2px solid var(--mag);padding:14px 0 18px}
+.tp h4{font:700 13px/1 var(--f-m);letter-spacing:.16em;text-transform:uppercase;margin:0 0 8px}
+.tp p{font:700 21px/1.25 var(--f-t);margin-bottom:10px}
+
+/* identidade */
+.card{background:var(--ink2);border-radius:16px;padding:18px;margin-bottom:14px}
+.card .logos{display:grid;gap:12px}
+.card .logos .on{background:var(--paper);border-radius:10px;padding:14px}
+.sw{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.sw i{display:block;height:58px;border-radius:10px}
+.sw b{display:block;font:700 15px/1.2 var(--f-t);margin-top:8px}
+.sw span{font:600 12px/1 var(--f-m)}
+.card.cores{background:var(--mid);color:var(--ink)}
+.typo div{display:flex;align-items:baseline;justify-content:space-between;gap:12px;border-top:1px solid var(--line-d);padding:10px 0}
+.typo div span:last-child{font:500 13px/1 var(--f-m);color:var(--mute-d)}
+.ir{display:grid;gap:10px;background:var(--ink2);border-radius:16px;padding:14px;margin-bottom:12px}
+.ir img{width:100%;border-radius:10px}
+.ir p{font:700 19px/1.3 var(--f-t)}
+.ir p span{display:block;font:400 15px/1.45 var(--f-b);color:#d8d4cb;margin-top:4px}
+.site{border-radius:14px;overflow:hidden;border:1px solid var(--line-d);margin-top:20px}
+.site .bar{display:flex;align-items:center;justify-content:space-between;gap:10px;background:#1d1d1d;padding:10px 12px;font:600 13px/1 var(--f-m);color:#cfcac0}
+.site .bar a{text-decoration:none;border:1.5px solid #555;border-radius:99px;padding:6px 10px}
+.site .cap{height:min(70vh,560px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+
+/* diagnostico e oportunidades */
+.dg{display:grid;gap:14px}
+.dg>div{border-radius:18px;padding:20px}
+.dg .f{background:var(--mag);color:#fff}
+.dg .a{background:var(--hl);color:var(--ink)}
+.dg h3{font:800 25px/1.1 var(--f-t);margin:0 0 6px}
+.dg p{font:700 19px/1.25 var(--f-t);border-top:1.5px solid currentColor;padding:12px 0 2px;margin-top:10px}
+.dg .f p{border-color:rgba(255,255,255,.45)} .dg .a p{border-color:rgba(8,8,8,.35)}
+.op{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.op div{background:var(--ink);color:var(--paper);border-radius:16px;padding:16px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.op div:first-child{background:var(--mag);color:#fff}
+.op i{font:800 36px/1 var(--f-t);font-style:normal;color:var(--mag)}
+.op div:first-child i{color:#fff}
+.op b{font:800 21px/1.12 var(--f-t)}
+
+/* conclusao */
+.stm div{border-top:1px solid var(--line-d);padding:16px 0}
+.stm b{display:block;font:800 30px/1 var(--f-t);letter-spacing:-.03em;margin-bottom:6px}
+.stm div:last-child b{color:var(--mag)}
+.end{text-align:center;padding:30px 0 6px}
+.end .dot{width:56px;height:56px;border-radius:50%;background:var(--mag);margin:0 auto 22px}
+.end h3{font:800 clamp(26px,8vw,36px)/1.08 var(--f-t);letter-spacing:-.03em;margin:0 0 18px}
+.end h3 em{font-style:normal;color:var(--mag)}
+.end p{font:600 13px/1.6 var(--f-m);letter-spacing:.08em;text-transform:uppercase;color:var(--mute-d)}
+
+/* referencias */
+.refs .g{border-top:1px solid var(--line-l);padding:14px 0}
+.refs h4{font:700 12.5px/1.3 var(--f-m);letter-spacing:.14em;text-transform:uppercase;color:var(--mag-ink);margin:0 0 6px}
+.refs p{font:400 14.5px/1.5 var(--f-m);overflow-wrap:anywhere}
+.foot{padding:30px 0 calc(40px + env(safe-area-inset-bottom));font:500 13px/1.6 var(--f-m);color:var(--mute-d);text-align:center}
+.foot a{display:inline-block;margin-top:14px;text-decoration:none;border:1.5px solid var(--paper);border-radius:99px;padding:10px 14px;color:var(--paper)}
+
+@media (min-width:640px){
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:last-child{grid-column:1/-1}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .dg{grid-template-columns:1fr 1fr}
+  .op{grid-template-columns:repeat(4,1fr)}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="w row"><b>Estudo <span>TIPZ</span></b><a href="index.html?deck">Ver como slides</a></div>
+  <nav class="nav" aria-label="Seções">
+    <a href="#tipz">A TIPZ</a><a href="#trajetoria">Trajetória</a><a href="#posicionamento">Posicionamento</a><a href="#cases">Cases</a><a href="#reconhecimento">Reconhecimento</a><a href="#persona">Persona</a><a href="#identidade">Identidade</a><a href="#diagnostico">Diagnóstico</a><a href="#oportunidades">Oportunidades</a><a href="#conclusao">Conclusão</a><a href="#referencias">Referências</a>
+  </nav>
+</header>
+
+<main>
+<section class="capa"><div class="w">
+  <div class="orb" aria-hidden="true"></div>
+  <p class="k">Branding</p>
+  <h1>Estudo de caso:</h1>
+  <img class="logo" src="assets/img/tipz-logo-claro.png" alt="TIPZ, Boutique Creative Agency">
+  <dl>
+    <div><dt>Curso</dt><dd>Publicidade e Propaganda, Multivix</dd></div>
+    <div><dt>Integrantes</dt><dd>Emmanuel Machado · Júlia Valadares · Izaias Johan</dd></div>
+    <div><dt>Ano</dt><dd>2026</dd></div>
+  </dl>
+</div></section>
+
+<section id="tipz"><div class="w">
+  <p class="no">02<i></i>A TIPZ</p>
+  <h2>Agência independente de Vitória</h2>
+  <div class="media"><video src="assets/video/abertura.mp4" poster="assets/img/bahia-medico.jpg" muted loop playsinline autoplay preload="metadata"></video></div>
+  <div class="facts">
+    <div><b>Vitória</b><p>agência independente, com sede em Santa Helena</p></div>
+    <div><b>2011</b><p>marca na web desde 2011; empresa aberta em 2012</p></div>
+    <div><b>5 frentes</b><div class="tags o"><span>Consultoria e estratégia</span><span>Branding</span><span>Propaganda</span><span>Conteúdo</span><span>Performance</span></div></div>
+  </div>
+  <div class="mission">
+    <p class="k">Missão</p>
+    <p class="ms">"Agregar valor para a <em>marca</em> e para o <em>negócio</em> do cliente e construir prosperidade para as pessoas que estão ao nosso lado."</p>
+    <p class="lr">Nossa leitura: a missão promete <b>valor para o negócio</b>, não só criatividade.</p>
+  </div>
+  <p class="src">Site tipz.com.br; Receita Federal (CNPJ); LinkedIn da TIPZ. Imagens: videocases inscritos no Festival Colibri.</p>
+</div></section>
+
+<section id="trajetoria" class="l"><div class="w">
+  <p class="no">03<i></i>Trajetória</p>
+  <h2>Do nascimento da marca ao cenário de hoje</h2>
+  <p class="sub">Três momentos documentados.</p>
+  <ol class="tl">
+    <li><b>2011</b><p>A marca nasce como "Tipz, Comunicação, Tecnologia e Marketing".</p></li>
+    <li><b>2020</b><p>Nova formação: passa a assinar "Tipz+".</p></li>
+    <li><b>Hoje</b><p>"Boutique Creative Agency", 2ª agência do Colibri 2026 e premiada fora do país.</p></li>
+  </ol>
+  <p class="src">Receita Federal; site e LinkedIn da TIPZ; Tribuna Online (07/01/2021); Festival Colibri 2025 e 2026.</p>
+</div></section>
+
+<section id="posicionamento" class="l" style="padding-top:0"><div class="w">
+  <p class="no">04<i></i>Posicionamento</p>
+  <h2>Como quer ser vista, como prova e o que o mercado enxerga</h2>
+  <div class="pos">
+    <div><h3><i></i>O que comunica</h3><p class="th">a promessa</p><div class="tags"><span>boutique criativa</span><span>independente</span><span>estratégica</span><span>B2B</span></div></div>
+    <p class="arrow" aria-hidden="true">↓</p>
+    <div><h3><i></i>Como demonstra</h3><p class="th">as provas</p><div class="tags"><span>ideias simples</span><span>causa e design</span><span>indústria do ES</span></div></div>
+    <p class="arrow" aria-hidden="true">↓</p>
+    <div><h3><i></i>Que percepção constrói</h3><p class="th">o que o mercado vê</p><div class="tags m"><span>premiada</span><span>criativa</span><span>2ª do ES</span></div></div>
+  </div>
+  <p class="src">Site tipz.com.br; Instagram e LinkedIn da TIPZ; Festival Colibri 2025 e 2026; WINA; A' Design Award. Bedendo (2024), cap. 5.</p>
+</div></section>
+
+<section id="cases"><div class="w">
+  <p class="no">05<i></i>Cases</p>
+  <h2>Três trabalhos que materializam a proposta</h2>
+  <p class="sub">Toque no vídeo para assistir.</p>
+  <article class="case">
+    <video src="assets/video/bahia.mp4" poster="assets/img/bahia-luva.jpg" controls muted playsinline preload="none"></video>
+    <div class="bd"><p class="cli">E. C. Bahia · Novembro Azul 2025</p><h3>Na Ponta dos Dedos</h3><p class="pr">Grand Prix no Colibri 2026 · prata e bronze no WINA 2026</p>
+      <dl><div><dt>Cliente e desafio</dt><dd>Falar de exame de próstata com a torcida, no Novembro Azul.</dd></div>
+      <div><dt>Ideia</dt><dd>A defesa com a ponta dos dedos vira o gesto do exame. No intervalo, o urologista Dr. Roberto Rossi vai para o gol com luvas cirúrgicas.</dd></div>
+      <div><dt>Com o posicionamento</dt><dd>Ideia de causa feita ao vivo, no estádio. Conversa com o "Inquietos. Presentes." que abre o site.</dd></div></dl></div>
+  </article>
+  <article class="case">
+    <video src="assets/video/rota.mp4" poster="assets/img/rota-rodovia.jpg" controls muted playsinline preload="none"></video>
+    <div class="bd"><p class="cli">Ecovias Capixaba · Maio Amarelo 2025</p><h3>Rota Amarela</h3><p class="pr">ouro, prata e bronze no Colibri 2026</p>
+      <dl><div><dt>Cliente e desafio</dt><dd>Renovar a mensagem do Maio Amarelo, campanha de segurança no trânsito que se repete todo ano.</dd></div>
+      <div><dt>Ideia</dt><dd>A BR-101 vira um roteiro de viagem tranquila, com pontos de parada e o vídeo da creator Lara Santana.</dd></div>
+      <div><dt>Com o posicionamento</dt><dd>Uma marca de infraestrutura falando com o motorista em tom de viagem, e não de alerta.</dd></div></dl></div>
+  </article>
+  <article class="case">
+    <video src="assets/video/cafe.mp4" poster="assets/img/cafe-gondola.jpg" controls muted playsinline preload="none"></video>
+    <div class="bd"><p class="cli">Cooabriel · 2024 e 2025</p><h3>Café Guardião</h3><p class="pr">ouro e prata no Colibri 2025 · bronze e iron no A' Design 2026</p>
+      <dl><div><dt>Cliente e desafio</dt><dd>Destacar o café conilon de uma cooperativa capixaba numa gôndola dominada por marcas grandes.</dd></div>
+      <div><dt>Ideia</dt><dd>"Um café feito por pessoas": o arcanjo São Gabriel e as asas viram a embalagem.</dd></div>
+      <div><dt>Com o posicionamento</dt><dd>Branding e embalagem, uma das cinco frentes da agência, chegando a um prêmio internacional de design.</dd></div></dl></div>
+  </article>
+  <p class="common">Nos três, o problema do cliente vira um gesto simples, fácil de lembrar.</p>
+</div></section>
+
+<section id="reconhecimento" class="l"><div class="w">
+  <p class="no">06<i></i>Reconhecimento</p>
+  <h2>O que a TIPZ conquistou em 2025 e 2026</h2>
+  <div class="stats">
+    <div><b>18</b><span>prêmios em 2025 e 2026</span><em>Colibri 14 · WINA 2 · A' Design 2</em></div>
+    <div><b>2º</b><span>lugar entre as agências no Colibri 2026</span><em>122 pontos</em></div>
+    <div><b>9º → 2º</b><span>no Colibri, em um ano</span><em>de 32 para 122 pontos</em></div>
+  </div>
+  <div class="vit">
+    <h3>E a vitrine de prêmios do site?</h3>
+    <p class="sub" style="margin-bottom:6px">O site mostra 19 selos. Conferimos cada um na fonte oficial.</p>
+    <div class="g c1"><b>3</b><h4>da TIPZ, 2025 e 2026</h4><p>Colibri, WINA, A' Design (2 de 3)</p></div>
+    <div class="g"><b>7</b><h4>trabalhos anteriores da equipe</h4><p>Cannes Lions, Cannes ACT, El Ojo, Lürzer's Archive, Paris Design, IDA, Lusófonos</p></div>
+    <div class="g"><b>1</b><h4>publicação, não prêmio</h4><p>Clube de Criação</p></div>
+    <div class="g"><b>8</b><h4>não confirmados</h4><p>FePI, LEAG, Bornancini, Renato Castelo Branco, Favourite, Davey, Communicator, W3</p></div>
+  </div>
+  <p class="src">Festival Colibri, resultados 2025 e 2026; WINA, vencedores 2026; A' Design Award, IDs 181277 e 181276; sites oficiais de cada prêmio.</p>
+</div></section>
+
+<section id="persona"><div class="w">
+  <p class="no">07<i></i>Persona</p>
+  <h2>A TIPZ como pessoa</h2>
+  <div class="per">
+    <img src="assets/img/persona-triz-m.jpg" alt="Retrato da persona Beatriz: mulher de 39 anos, cabelo rosa claro, blazer preto e gravata" loading="lazy">
+    <div class="nm"><b>Beatriz</b><span>"Triz", CEO e diretora executiva</span><em>personagem fictícia</em></div>
+  </div>
+  <div class="tp"><h4>Personalidade</h4><p>Criativa, estratégica e independente.</p><div class="tags o"><span>inquieta</span><span>segura de si</span><span>autoral</span><span>presente</span></div></div>
+  <div class="tp"><h4>Visual</h4><p>Elegante, contemporânea e criativa.</p><div class="tags o"><span>39 anos</span><span>cabelo rosa claro</span><span>blazer preto</span><span>toque magenta</span></div></div>
+  <div class="tp"><h4>Comunicação</h4><p>Inteligente, direta e persuasiva.</p><div class="tags o"><span>clara</span><span>estratégica</span><span>mostra resultados, prêmios e método</span></div></div>
+  <p class="src">Persona e imagem criadas pelo grupo a partir da pesquisa sobre a marca.</p>
+</div></section>
+
+<section id="identidade"><div class="w">
+  <p class="no">08<i></i>Identidade</p>
+  <h2>A marca que sustenta o discurso</h2>
+  <div class="card"><p class="k" style="color:var(--mute-d)">Logo</p><div class="logos"><img src="assets/img/tipz-logo-claro.png" alt="Logo da TIPZ sobre fundo preto"><div class="on"><img src="assets/img/tipz-logo-escuro.png" alt="Logo da TIPZ sobre fundo claro"></div></div></div>
+  <div class="card cores"><p class="k" style="color:var(--ink)">Cores</p><div class="sw"><div><i style="background:#080808"></i><b>Preto</b><span>#080808</span></div><div><i style="background:#F0EDE6"></i><b>Off-white</b><span>#F0EDE6</span></div><div><i style="background:#E8007D"></i><b>Magenta</b><span>#E8007D</span></div></div></div>
+  <div class="card typo"><p class="k" style="color:var(--mute-d)">Tipografia</p><div><span style="font:italic 600 21px 'Playfair Display',Georgia,serif;color:var(--mag)">Playfair Display itálico</span><span>frases</span></div><div><span style="font:600 17px var(--f-m)">JETBRAINS MONO</span><span>rótulos</span></div><div><span style="font:500 19px var(--f-b)">Inter</span><span>texto</span></div></div>
+  <p class="k" style="margin-top:26px">O que a identidade transmite</p>
+  <div class="ir"><img src="assets/img/ev-serif.jpg" alt="Título do site em serifa pesada com itálico magenta" loading="lazy"><p>Autoral · editorial · segura de si<span>Personalidade</span></p></div>
+  <div class="ir"><img src="assets/img/ev-hero.jpg" alt="Topo do site: Independentes, inquietos, presentes, em volta do pingo magenta" loading="lazy"><p>Exclusividade · foco · um só ponto de cor<span>Sensação</span></p></div>
+  <div class="ir"><p>Forte em "boutique criativa" e "inquietos"<span>Com o posicionamento: fraca em "estratégica" e "B2B".</span></p></div>
+  <div class="site"><div class="bar"><span>tipz.com.br · role aqui dentro</span><a href="https://tipz.com.br/" target="_blank" rel="noopener">abrir ↗</a></div><div class="cap"><img src="assets/img/site-tipz-completo.jpg" alt="Página inicial do site da TIPZ, capturada em 05/11/2026" loading="lazy"></div></div>
+  <p class="src">Site tipz.com.br (código e captura de 05/11/2026); logo oficial da agência.</p>
+</div></section>
+
+<section id="diagnostico" class="l"><div class="w">
+  <p class="no">09<i></i>Diagnóstico</p>
+  <h2>O que sustenta a marca e o que merece atenção</h2>
+  <div class="dg">
+    <div class="f"><h3>● Forças da marca</h3><p>Reputação criativa comprovada</p><p>Identidade própria e reconhecível</p><p>Carteira de peso no Espírito Santo</p><p>Sócios dentro do trabalho</p></div>
+    <div class="a"><h3>○ Pontos de atenção</h3><p>Muitos nomes para a mesma agência</p><p>Vitrine de prêmios misturada</p><p>Muito troféu, pouco processo</p><p>Site e canais desatualizados</p></div>
+  </div>
+  <p class="src">Festival Colibri 2026; WINA; A' Design Award; site, Instagram (84 posts), LinkedIn, YouTube e Google da TIPZ, lidos em 03/11/2026.</p>
+</div></section>
+
+<section id="oportunidades" class="l" style="padding-top:0"><div class="w">
+  <p class="no">10<i></i>Oportunidades</p>
+  <h2>O que recomendamos</h2>
+  <div class="op"><div><i>01</i><b>Uma assinatura só</b></div><div><i>02</i><b>Mostrar o método</b></div><div><i>03</i><b>Cases com resultado</b></div><div><i>04</i><b>Vitrine com fonte</b></div></div>
+  <p class="src">Rocha e Oliveira (2017); Bedendo (2024).</p>
+</div></section>
+
+<section id="conclusao"><div class="w">
+  <p class="no">11<i></i>Conclusão</p>
+  <h2>O que o estudo mostra sobre branding</h2>
+  <div class="stm">
+    <div><b>Identidade</b><p>Própria e bem aplicada: é a parte mais consistente da marca.</p></div>
+    <div><b>Reputação</b><p>Comprovada por júris independentes: os cases de 2026 levaram a TIPZ ao 2º lugar no ES e a prêmios fora do país.</p></div>
+    <div><b>Posicionamento</b><p>Pede síntese: uma assinatura, método visível e cases com resultado aproximam o que ela diz do que ela entrega.</p></div>
+  </div>
+  <div class="end"><div class="dot" aria-hidden="true"></div><h3>Uma marca é escolhida quando as três coisas <em>apontam para o mesmo lugar.</em></h3><p>Obrigado · Emmanuel Machado · Júlia Valadares · Izaias Johan</p></div>
+</div></section>
+
+<section id="referencias" class="l refs"><div class="w">
+  <p class="no">Referências</p>
+  <div class="g"><h4>Empresa</h4><p>Receita Federal via BrasilAPI e CNPJ.ws (CNPJ 16.876.571/0001-24)</p><p>Site tipz.com.br: textos, código e captura de 05/11/2026</p><p>Instagram @tipz.com.br; LinkedIn; YouTube @tipzcomunicacao; Google Maps</p></div>
+  <div class="g"><h4>Imprensa</h4><p>A Gazeta: WINA (30/06/2026); seis anos da nova fase (06/10/2026)</p><p>Tribuna Online: WINA (27/07/2026); Archive (07/01/2021)</p><p>Folha Vitória (2026)</p><p>Clube de Criação, acervo (28/11/2025)</p></div>
+  <div class="g"><h4>Prêmios</h4><p>Festival Colibri: resultados 2025 e 2026; fichas 736, 814 e 651 e videocases</p><p>WINA: vencedores 2026</p><p>A' Design Award: IDs 181277, 181276 e 117271</p><p>Meio &amp; Mensagem (Cannes 2017); Consumidor Moderno (2018); Nosso Meio (Lusófonos, 2024)</p></div>
+  <div class="g"><h4>Cases</h4><p>Post do E. C. Bahia no Instagram (25/11/2025)</p><p>ESPN: Bahia x Vasco, 23/11/2025</p><p>YouTube de Lara Santana, Rota Amarela</p></div>
+  <div class="g"><h4>Mercado</h4><p>Grandes Nomes da Propaganda (30/09/2026); 24h Notícias (25/09/2026)</p><p>Sites da MP, Prósper, Ampla; ES Hoje (Conteúdo, 2026); Stone World (Marmomac 2025)</p></div>
+  <div class="g"><h4>Livros da disciplina</h4><p>Bedendo (2024). Branding: como fazer na prática, cap. 5</p><p>Rocha e Oliveira (2017), cap. 2</p><p>Melo et al. (SAGAH, 2018), cap. Branding</p><p>Perez; Consolo</p><p>Pesquisa feita entre 03 e 05/11/2026.</p></div>
+</div></section>
+</main>
+
+<footer class="foot"><div class="w">Trabalho acadêmico de Branding (Multivix, 2026), sem vínculo com a agência TIPZ.<br><a href="index.html?deck">Ver como slides (melhor no computador ou com o celular deitado)</a></div></footer>
+
+<script>
+/* o video de abertura so toca quando aparece na tela; os cases tocam com toque */
+(function(){var v=document.querySelector('#tipz video');if(!v||!('IntersectionObserver' in window))return;
+  new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){});}else v.pause();});},{threshold:.4}).observe(v);})();
+</script>
+</body>
+</html>

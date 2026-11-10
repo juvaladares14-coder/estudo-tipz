@@ -399,6 +399,35 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 #s11 .bye{position:absolute;right:120px;bottom:100px;text-align:right}
 #s11 .bye img{width:300px;display:block;margin-left:auto}
 #s11 .bye p{font:500 17px/1.4 var(--f-m);letter-spacing:.06em;margin-top:14px;color:var(--mute-l)}
+#s11 .disc{position:absolute;left:120px;bottom:40px;font:500 16px/1.4 var(--f-m);letter-spacing:.06em;color:var(--mute-l)}
+
+/* ============ Persona (Beatriz, a TIPZ como pessoa) ============ */
+#s14 .bgp{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#s14 .shd{position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,8,8,.55),rgba(8,8,8,0) 38%,rgba(8,8,8,0) 62%,rgba(8,8,8,.5))}
+#s14 .ttl{color:var(--paper)}
+#s14 .nmb{position:absolute;left:120px;top:236px;width:560px}
+#s14 .nmb b{display:block;font:800 124px/.95 var(--f-t);letter-spacing:-.05em;color:var(--mag)}
+#s14 .nmb span{display:block;font:700 30px/1.25 var(--f-t);margin-top:14px}
+#s14 .nmb em{display:block;font:600 16px/1.4 var(--f-m);font-style:normal;letter-spacing:.12em;text-transform:uppercase;color:#d8d4cb;margin-top:12px}
+#s14 .tp{position:absolute;width:480px;text-shadow:0 2px 14px rgba(0,0,0,.45)}
+#s14 .tp i{display:block;width:96px;height:3px;background:var(--mag);margin-bottom:16px}
+#s14 .tp h4{font:700 18px/1 var(--f-m);letter-spacing:.18em;text-transform:uppercase;color:#fff;margin:0 0 10px}
+#s14 .tp p{font:700 32px/1.2 var(--f-t);letter-spacing:-.015em;color:#fff;margin:0 0 14px}
+#s14 .tp .tg{display:flex;flex-wrap:wrap;gap:8px}
+#s14 .tp .tg span{font:600 18px/1 var(--f-b);padding:9px 14px;border-radius:99px;background:rgba(8,8,8,.55);border:1px solid rgba(240,237,230,.3);color:#fff;text-shadow:none}
+#s14 .t1{left:120px;top:600px}
+#s14 .t2{left:1330px;top:220px}
+#s14 .t3{left:1330px;top:640px}
+#s14 .src{color:#d8d4cb}
+
+/* ============ QR no fim ============ */
+.qrb{display:flex;align-items:center;gap:20px}
+.qrb img{width:150px;height:150px;background:#fff;border-radius:12px;padding:8px;display:block}
+.qrb p{font:700 22px/1.25 var(--f-t);margin:0}
+.qrb p span{display:block;font:500 14px/1.4 var(--f-m);letter-spacing:.04em;opacity:.7;margin-top:6px}
+#s10 .qrb{position:absolute;right:120px;top:96px;text-align:left}
+#s11 .qrb{position:absolute;right:120px;bottom:100px}
+#s11 .qrb p{color:var(--ink)}
 
 /* ============ 3D ============ */
 .h3d{position:absolute;pointer-events:none}
@@ -613,9 +642,25 @@ body.presenter #pv{display:grid}
   <aside class="notes" data-k="3">Ler o que a TIPZ disse sobre o que mudou para chegar ao 2º lugar.</aside>
 </section>
 
-<!-- ================= 07 IDENTIDADE ================= -->
+<!-- ================= 07 PERSONA ================= -->
+<section class="slide dark" id="s14" data-title="Persona" data-time="50">
+  <img class="bgp" src="assets/img/persona-triz.jpg" alt="Retrato da persona Beatriz: mulher de 39 anos, cabelo rosa claro, blazer preto e gravata">
+  <div class="shd"></div>
+  <h2 class="ttl"><span class="no">07</span><span class="rule"></span>Persona</h2>
+  <div class="nmb"><b>Beatriz</b><span>"Triz", CEO e diretora executiva</span><em>A TIPZ como pessoa · personagem fictícia</em></div>
+  <div class="tp t1" data-s="1"><i></i><h4>Personalidade</h4><p>Criativa, estratégica e independente.</p><div class="tg"><span>inquieta</span><span>segura de si</span><span>autoral</span><span>presente</span></div></div>
+  <div class="tp t2" data-s="2"><i></i><h4>Visual</h4><p>Elegante, contemporânea e criativa.</p><div class="tg"><span>39 anos</span><span>cabelo rosa claro</span><span>blazer preto</span><span>toque magenta</span></div></div>
+  <div class="tp t3" data-s="3"><i></i><h4>Comunicação</h4><p>Inteligente, direta e persuasiva.</p><div class="tg"><span>clara</span><span>estratégica</span><span>mostra resultados, prêmios e método</span></div></div>
+  <p class="src">Persona e imagem criadas pelo grupo a partir da pesquisa sobre a marca.</p>
+  <aside class="notes" data-k="0">Para traduzir tudo isso de forma mais próxima, criamos uma persona: a TIPZ como pessoa. <b>Beatriz, a Triz</b>, CEO e diretora executiva, 39 anos. Madura, com repertório e prêmios, mas sem perder a personalidade autoral. Fugimos de uma figura jovem demais, que não combinaria com a credibilidade da marca.</aside>
+  <aside class="notes" data-k="1"><b>Personalidade:</b> criativa, estratégica e independente. Inquieta, segura de si, autoral e presente, como o "Independentes. Inquietos. Presentes." do site.</aside>
+  <aside class="notes" data-k="2"><b>Visual:</b> elegante, contemporânea e criativa. O cabelo rosa claro e os detalhes magenta vêm da cor da marca; o blazer preto, da postura corporativa. Corporativa, mas com personalidade.</aside>
+  <aside class="notes" data-k="3"><b>Comunicação:</b> inteligente, direta e persuasiva. Fala de forma criativa sem perder a postura de quem lidera o negócio, e mostra resultados, prêmios e método. É a boutique criativa independente em forma de gente.</aside>
+</section>
+
+<!-- ================= 08 IDENTIDADE ================= -->
 <section class="slide dark" id="s4" data-title="Identidade" data-time="40">
-  <h2 class="ttl"><span class="no">07</span><span class="rule"></span>Identidade</h2>
+  <h2 class="ttl"><span class="no">08</span><span class="rule"></span>Identidade</h2>
   <p class="sub">Logo, cores, tipografia e site: a marca que sustenta o discurso, os cases e os prêmios.</p>
   <div class="left" data-out="1">
     <div class="card logo"><div><h3>Logo</h3><img src="assets/img/tipz-logo-claro.png" alt="Logo da TIPZ sobre fundo preto" style="width:440px"></div><div class="onlight"><img src="assets/img/tipz-logo-escuro.png" alt="Logo da TIPZ sobre fundo claro" style="width:100%"></div></div>
@@ -643,13 +688,13 @@ body.presenter #pv{display:grid}
   </div>
   <p class="hint" id="site-hint">Role dentro da janela para explorar o site.</p>
   <p class="src">Site tipz.com.br (código e captura de 05/11/2026); prints do site de 03/11/2026; logo oficial da agência.</p>
-  <aside class="notes" data-k="0">Depois de tudo o que vimos, a identidade reforça: logo com o pingo do "i" em magenta, três cores e três fontes. <b>Rolar o site na janela da direita</b>: a constelação que nasce do pingo, os cases e a parede de prêmios.</aside>
+  <aside class="notes" data-k="0">E a identidade visual reforça tudo isso, como a roupa da Beatriz: logo com o pingo do "i" em magenta, três cores e três fontes. <b>Rolar o site na janela da direita</b>: a constelação que nasce do pingo, os cases e a parede de prêmios.</aside>
   <aside class="notes" data-k="1">O que ela transmite: personalidade autoral e editorial (a serifa pesada com itálico magenta), sensação de exclusividade (fundo preto e um só ponto de cor). Conversa muito bem com "boutique criativa"; fala menos com "estratégica" e "B2B".</aside>
 </section>
 
-<!-- ================= 08 DIAGNOSTICO ================= -->
+<!-- ================= 09 DIAGNOSTICO ================= -->
 <section class="slide dark" id="s13" data-title="Diagnóstico" data-time="40">
-  <h2 class="ttl"><span class="no">08</span><span class="rule"></span>Diagnóstico</h2>
+  <h2 class="ttl"><span class="no">09</span><span class="rule"></span>Diagnóstico</h2>
   <p class="sub">O que sustenta a marca e o que merece atenção, sempre com a evidência.</p>
   <div class="dg">
     <div class="dc f"><h3><i></i>Forças da marca</h3>
@@ -670,9 +715,9 @@ body.presenter #pv{display:grid}
   <aside class="notes" data-k="1"><b>Pontos de atenção.</b> Sete descritores entre site, Instagram, LinkedIn e Google. Dos 19 selos da vitrine, 3 são da TIPZ. 48 de 84 posts são case ou prêmio e 1 é educativo; o "Método Tipz" não é explicado. Cases premiados fora do site e links para canais antigos. Em resumo: a força está no trabalho; a fragilidade, em como a agência se apresenta.</aside>
 </section>
 
-<!-- ================= 09 OPORTUNIDADES ================= -->
+<!-- ================= 10 OPORTUNIDADES ================= -->
 <section class="slide light" id="s9" data-title="Oportunidades" data-time="35">
-  <h2 class="ttl"><span class="no">09</span><span class="rule"></span>Oportunidades</h2>
+  <h2 class="ttl"><span class="no">10</span><span class="rule"></span>Oportunidades</h2>
   <p class="sub">O que recomendamos, como se a TIPZ fosse nossa cliente.</p>
   <div class="opc">
     <div><i>01</i><b>Uma assinatura só</b></div>
@@ -687,9 +732,9 @@ body.presenter #pv{display:grid}
   <aside class="notes" data-k="3"><b>Vitrine com fonte.</b> Separar "prêmios da TIPZ" de "trajetória da equipe" e indicar a fonte de cada selo. Credibilidade é critério de posicionamento (Bedendo).</aside>
 </section>
 
-<!-- ================= 10 CONCLUSAO ================= -->
+<!-- ================= 11 CONCLUSAO ================= -->
 <section class="slide dark" id="s10" data-title="Conclusão" data-time="30">
-  <h2 class="ttl"><span class="no">10</span><span class="rule"></span>Conclusão</h2>
+  <h2 class="ttl"><span class="no">11</span><span class="rule"></span>Conclusão</h2>
   <p class="sub">O que o estudo da TIPZ mostra sobre branding.</p>
   <div class="stm">
     <div><b>Identidade</b><p>Própria e bem aplicada: é a parte mais consistente da marca.</p></div>
@@ -701,6 +746,7 @@ body.presenter #pv{display:grid}
     <div class="orbs2 fallback2d"><div class="orb o1">o que ela diz</div><div class="orb o2">o que ela prova</div><div class="orb o3">o que o mercado percebe</div><div class="pingo"></div></div>
     <h2>Uma marca é escolhida quando as três coisas <em>apontam para o mesmo lugar.</em></h2>
     <div class="bye" data-s="2"><b>Obrigado.</b>Emmanuel Machado · Júlia Valadares · Izaias Johan</div>
+    <div class="qrb" data-s="2"><img src="assets/img/qr-site.svg" alt="QR code para a apresentação completa"><p>Veja a apresentação completa<span>juvaladares14-coder.github.io/estudo-tipz</span></p></div>
   </div>
   <aside class="notes" data-k="0">Conclusão estratégica em três frases. Identidade: forte e bem aplicada. Reputação: comprovada por júris independentes. Posicionamento: pede síntese, e as oportunidades mostram como.</aside>
   <aside class="notes" data-k="1">Voltar à pergunta do slide 4: o que ela diz, o que ela prova e o que o mercado percebe.</aside>
@@ -718,8 +764,9 @@ body.presenter #pv{display:grid}
     <div class="g"><h4>Mercado</h4><p>Grandes Nomes da Propaganda (30/09/2026); 24h Notícias (25/09/2026)</p><p>Sites da MP, Prósper, Ampla; ES Hoje (Conteúdo, 2026); Stone World (Marmomac 2025)</p></div>
     <div class="g"><h4>Livros da disciplina</h4><p>Bedendo (2024). Branding: como fazer na prática, cap. 5</p><p>Rocha e Oliveira (2017), cap. 2</p><p>Melo et al. (SAGAH, 2018), cap. Branding</p><p>Perez; Consolo</p><p><span>Pesquisa feita entre 03 e 05/11/2026.</span></p></div>
   </div>
-  <div class="bye"><img src="assets/img/tipz-logo-escuro.png" alt="Logo da TIPZ"><p>Trabalho acadêmico, sem vínculo com a agência.</p></div>
-  <aside class="notes" data-k="0">Deixar na tela durante as perguntas.</aside>
+  <div class="qrb"><img src="assets/img/qr-site.svg" alt="QR code para a apresentação completa"><p>Veja a apresentação completa<span>juvaladares14-coder.github.io/estudo-tipz</span></p></div>
+  <p class="disc">Trabalho acadêmico, sem vínculo com a agência.</p>
+  <aside class="notes" data-k="0">Deixar na tela durante as perguntas. Quem quiser ver a apresentação completa pode ler o QR code.</aside>
 </section>
 
 <div id="hud"></div>
@@ -727,7 +774,7 @@ body.presenter #pv{display:grid}
 <div id="notesbox"></div>
 <div id="blackout"></div>
 </div>
-<div id="rotate"><i></i>Gire o celular para ver a apresentação.</div>
+<div id="rotate"><i></i>Gire o celular para ver a apresentação.<a href="celular.html" style="color:var(--mag);font-size:18px;margin-top:6px">ou veja a versão para celular</a></div>
 
 <div id="pv">
   <div>
@@ -767,6 +814,8 @@ const CAMADAS = { agencia: null, turma: null };   // o mapa perceptual saiu em 0
 
 /* ===================== Motor da apresentacao ===================== */
 const isPresenter = new URLSearchParams(location.search).has('presenter');
+/* celular em pé abre a versão feita para celular (?deck força a apresentação) */
+if(!isPresenter && !new URLSearchParams(location.search).has('deck') && matchMedia('(orientation: portrait) and (max-width: 900px)').matches){ location.replace('celular.html'); }
 const isStatic = new URLSearchParams(location.search).has('static');
 const stage = document.getElementById('stage');
 const slides = [...document.querySelectorAll('.slide')];
